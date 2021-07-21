@@ -8,5 +8,8 @@
 | 9465번   | [스티커](https://www.acmicpc.net/problem/9465)            | [설명](https://blog.naver.com/yepp0517/222431650028) |
 | 2193번   | [이친수](https://www.acmicpc.net/problem/2193)            | [설명](https://blog.naver.com/yepp0517/222432700136) |
 | 10835번  | [카드게임](https://www.acmicpc.net/problem/10835)         | [설명](https://blog.naver.com/yepp0517/222432740438) |
-| 1197번|[최소 스패닝 트리](https://www.acmicpc.net/problem/1197) | [설명]|
+
+##Graph
+| 1197번|[최소 스패닝 트리](https://www.acmicpc.net/problem/1197) | [설명](https://blog.naver.com/yepp0517)|
+|7562번|[카드게임](https://www.acmicpc.net/problem/7562)         | [설명](https://blog.naver.com/yepp0517) |
 

@@ -15,5 +15,6 @@
 | 문제번호 | page                                                      | 답지설명                                             |
 | -------- | --------------------------------------------------------- | ---------------------------------------------------- |
 | 1197번|[최소 스패닝 트리](https://www.acmicpc.net/problem/1197) | [설명](https://blog.naver.com/yepp0517)|
-|7562번|[카드게임](https://www.acmicpc.net/problem/7562)         | [설명](https://blog.naver.com/yepp0517) |
+|7562번|[나이트의 이동](https://www.acmicpc.net/problem/7562)         | [설명](https://blog.naver.com/yepp0517) |
+|22251번|[빌런](https://www.acmicpc.net/problem/22251)         | [설명](https://blog.naver.com/yepp0517) |
 

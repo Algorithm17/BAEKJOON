@@ -7,9 +7,8 @@ using namespace std;
 
 
 int N; // 수의 길이
-int uphill_road[1001];
-int uphill_road_secondary[1001][10];  // 오르막 수 개수
-
+int uphill_road[1001][11]; // 자리 값
+int total[1001][11];  // 총합
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -20,24 +19,34 @@ int main(){
     cin >> N;
 
 
-    for(int i =0;i<10;i++){
-        uphill_road_secondary[1][i] = 1;
+
+    for(int i = 9;i >= 0;i--){
+        uphill_road[1][i] = 1;
+
+        if(i==9){
+            total[1][i] = 1;
+            continue;
+        }
+
+
+        total[1][i] += total[1][i+1] + 1;
     }
 
     for(int i=2;i<=N;i++){
-        int sum = 0;
-        int result =0 ;
-        for(int j=0;j<10;j++){
-            sum += uphill_road_secondary[i-1][j];
-            uphill_road_secondary[i][j] = uphill_road[i-1] - sum;
-            result += uphill_road_secondary[i][j];
+        for(int j=9;j>=0;j--){
+            uphill_road[i][j] = total[i-1][j]%10007;
+            if(j==9){
+                total[i][j] = 1;
+                continue;
+            }
+
+            total[i][j] = (total[i][j+1]%10007 + uphill_road[i][j]%10007)%10007;
         }
-        uphill_road[i] = (uphill_road[i-1] + result)%10007;
     }
 
-    printf("%d\n",uphill_road[N]);
 
 
+    printf("%d\n",total[N][0]%10007);
 
 
 

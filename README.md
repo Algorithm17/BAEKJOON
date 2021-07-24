@@ -9,6 +9,7 @@
 | 9465번   | [스티커](https://www.acmicpc.net/problem/9465)            | [설명](https://blog.naver.com/yepp0517/222431650028) |
 | 2193번   | [이친수](https://www.acmicpc.net/problem/2193)            | [설명](https://blog.naver.com/yepp0517/222432700136) |
 | 10835번  | [카드게임](https://www.acmicpc.net/problem/10835)         | [설명](https://blog.naver.com/yepp0517/222432740438) |
+| 11057번  | [오르막 수](https://www.acmicpc.net/problem/11057)         | [설명](https://blog.naver.com/yepp0517) |
 
 
 #### Graph

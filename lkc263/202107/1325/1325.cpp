@@ -1,14 +1,13 @@
 #include<iostream>
 #include<algorithm>
 #include<cstdio>
-
+#include<vector>
 
 #define N_MAX_NUMBER 10001
-#define M_MAX_NUMBER 10001
 
 using namespace std;
 
-int arr[N_MAX_NUMBER][M_MAX_NUMBER];
+vector<int> arr[N_MAX_NUMBER];
 int visited[N_MAX_NUMBER];
 int count_arr[N_MAX_NUMBER];
 
@@ -21,10 +20,9 @@ void dfs(int n){
 
     visited[n] = 1;
 
-    for(int i= 1;i<=arr[n];i++){
-        if(arr[n][i] && !visited[i]){
+    for(int i= 0;i<arr[n].size() ;i++){
+        if(!visited[arr[n][i]]){
             cnt++;
-            visited[i] = 1;
             dfs(arr[n][i]);
         }
     }
@@ -38,10 +36,9 @@ int main(){
 
     cin >> N >> M;
 
-
     for(int i=0;i<M;i++){
         cin >> A >> B;
-        arr[A][i] = B;
+        arr[B].push_back(A);
     }
 
     for(int i=1;i<=N;i++){

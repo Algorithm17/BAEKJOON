@@ -10,6 +10,9 @@
 | 2193번   | [이친수](https://www.acmicpc.net/problem/2193)            | [설명](https://blog.naver.com/yepp0517/222432700136) |
 | 10835번  | [카드게임](https://www.acmicpc.net/problem/10835)         | [설명](https://blog.naver.com/yepp0517/222432740438) |
 | 11057번  | [오르막 수](https://www.acmicpc.net/problem/11057)         | [설명](https://blog.naver.com/yepp0517) |
+| 11727번  | [2xn 타일링2](https://www.acmicpc.net/problem/11727)         | [설명](https://blog.naver.com/yepp0517) |
+| 4485번  | [녹색 옷입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)         | [설명](https://blog.naver.com/yepp0517) |
+
 
 
 #### Graph
@@ -17,5 +20,9 @@
 | -------- | --------------------------------------------------------- | ---------------------------------------------------- |
 | 1197번|[최소 스패닝 트리](https://www.acmicpc.net/problem/1197) | [설명](https://blog.naver.com/yepp0517)|
 |7562번|[나이트의 이동](https://www.acmicpc.net/problem/7562)         | [설명](https://blog.naver.com/yepp0517) |
-|22251번|[빌런](https://www.acmicpc.net/problem/22251)         | [설명](https://blog.naver.com/yepp0517) |
+|22251번|[빌런 호석](https://www.acmicpc.net/problem/22251)         | [설명](https://blog.naver.com/yepp0517) |
+| 9205번  | [맥주 마시면서 걸어가기](https://www.acmicpc.net/problem/9205)         | [설명](https://blog.naver.com/yepp0517) |
+| 5567번  | [결혼식](https://www.acmicpc.net/problem/5567)         | [설명](https://blog.naver.com/yepp0517) |
+| 5014번  | [스타트링크](https://www.acmicpc.net/problem/5014)         | [설명](https://blog.naver.com/yepp0517) |
+| 1325번  | [효율적인 해킹](https://www.acmicpc.net/problem/1325)         | [설명](https://blog.naver.com/yepp0517) |
 

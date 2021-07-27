@@ -165,11 +165,44 @@ iv.clear();                       // iv :
 
 
 
+# Priority_Queue
+
+**1. Priority_Queue란 무엇인가?**
+
+Priority_Queue는 Queue의 한 종류로 우선순위에 따라 정렬된 Queue이다.
+
+어떤 원소가 삽입되면 주어진 우선순위에 맞춰서 Queue가 정렬되고, 삭제는 정렬된 Queue의 앞에서 이루어진다.
+
+Heap로 구현되었기 때문에, O(log) 시간복잡도
+
+**2. C++ STL 우선순위 큐 라이브러리 기본 명령어**
+
+```c++
+#include<queue>
+```
+
+```tex
+- priority_queue<자료형, Container, 비교함수> 변수명
+: 선언한 자료형 변수들을 비교함수에 따라 정렬하는 
+(비교함수에 greater<int> 넣어주면 오름차순으로 정렬)
+Priority_Queue(우선순위 큐)를 선언
+- priority_queue<자료형> 변수명
+: 선언한 자료형 변수들을 내림차순에 따라 정렬하는 Priority_Queue(우선순위 큐)를 선언
+
+- push(element) : Priority_Queue(우선순위 큐)에 원소 삽입 (삽입시 정렬됨)
+- pop() : 맨 앞에 있는 원소 삭제
+- top() : 맨 앞에 있는 원소를 반환
+- empty() : Priority_Queue(우선순위 큐)가 비어있으면 true 아니면 false를 반환
+- size() : Priority_Queue(우선순위 큐)의 크기를 반환
+```
 
 
 
 
 
+
+
+참고자료 : https://travelbeeee.tistory.com/126
 
 참고자료 : https://ok4u.tistory.com/82
 

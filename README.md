@@ -12,6 +12,8 @@
 | 11057번  | [오르막 수](https://www.acmicpc.net/problem/11057)         | [설명](https://blog.naver.com/yepp0517) |
 | 11727번  | [2xn 타일링2](https://www.acmicpc.net/problem/11727)         | [설명](https://blog.naver.com/yepp0517) |
 | 4485번  | [녹색 옷입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)         | [설명](https://blog.naver.com/yepp0517) |
+| 10844번  | [쉬운 계단 수](https://www.acmicpc.net/problem/10844)         | [설명](https://blog.naver.com/yepp0517) |
+| 16194번  | [카드 구매하기 2](https://www.acmicpc.net/problem/16194)         | [설명](https://blog.naver.com/yepp0517) |
 
 
 
@@ -25,4 +27,13 @@
 | 5567번  | [결혼식](https://www.acmicpc.net/problem/5567)         | [설명](https://blog.naver.com/yepp0517) |
 | 5014번  | [스타트링크](https://www.acmicpc.net/problem/5014)         | [설명](https://blog.naver.com/yepp0517) |
 | 1325번  | [효율적인 해킹](https://www.acmicpc.net/problem/1325)         | [설명](https://blog.naver.com/yepp0517) |
+| 1261번  | [알고스팟](https://www.acmicpc.net/problem/1261)         | [설명](https://blog.naver.com/yepp0517) |
+
+
+
+#### Brute Force
+
+| 문제번호 | page | 답지설명 |
+| -------- | ---- | -------- |
+| 15683번  | [감시](https://www.acmicpc.net/problem/15683)         | [설명](https://blog.naver.com/yepp0517) |
 

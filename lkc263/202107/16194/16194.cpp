@@ -1,38 +1,34 @@
 #include<iostream>
 #include<algorithm>
-#include<vector>
+#include<cmath>
+
+#define NLAN 1001
 
 using namespace std;
 
-
-int vc[1001][1];
-int result;
-int P[1001];
-
 int N;
-int find_check;
+int minarr[NLAN];
+int P[NLAN];
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
     cin >> N;
 
+
     for(int i=1;i<=N;i++){
         cin >> P[i];
-        if(N % i == 0){
-            vc[i][0] = N/i;
+        minarr[i] = P[i];
+        for(int j=1;j<i;j++){
+            minarr[i] = min(minarr[j]+P[i-j],minarr[i]);
         }
     }
 
-    result = 999999;
-    int test_n = N;
 
-    for(int i=1;i<=N;i++){
-        if(N % i == 0 && result > vc[i][0] * P[i]){
-            result = vc[i][0] * P[i];
-        }
-    }
+    cout << minarr[N] << "\n";
 
-    cout << result <<"\n";
 
     return 0;
 }

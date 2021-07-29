@@ -36,4 +36,5 @@
 | 문제번호 | page | 답지설명 |
 | -------- | ---- | -------- |
 | 15683번  | [감시](https://www.acmicpc.net/problem/15683)         | [설명](https://blog.naver.com/yepp0517) |
+| 1969번  | [DNA](https://www.acmicpc.net/problem/1969)         | [설명](https://blog.naver.com/yepp0517) |
 

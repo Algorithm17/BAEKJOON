@@ -10,9 +10,9 @@ using namespace std;
 int dp[51][51][51];
 int w(int a,int b, int c){
 
-    if(a<=0 || b<=0 || c<=0) return 1;
-    if(dp[a][b][c]) return dp[a][b][c];
-    if(a > 20 || b>20 || c>20) return dp[a][b][c] = w(20,20,20);
+    if(a<=0 || b<=0 || c<=0) return 1; //여기는 저장할 필요 없고 0이하는 배열 인덱스가 될 수 없다.
+    if(dp[a][b][c]) return dp[a][b][c]; // 저장되어 있는 값이면 그대로 반환한다.
+    if(a > 20 || b>20 || c>20) return dp[a][b][c] = w(20,20,20); // 결과값을 dp 인덱스 자리에 넣는다.
     if(a<b && b<c) return dp[a][b][c] = (w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c));
     else return dp[a][b][c] = (w(a-1,b,c)+w(a-1,b-1,c)+w(a-1,b,c-1)-w(a-1,b-1,c-1));
 

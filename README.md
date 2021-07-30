@@ -14,7 +14,7 @@
 | 4485번  | [녹색 옷입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)         | [설명](https://blog.naver.com/yepp0517) |
 | 10844번  | [쉬운 계단 수](https://www.acmicpc.net/problem/10844)         | [설명](https://blog.naver.com/yepp0517) |
 | 16194번  | [카드 구매하기 2](https://www.acmicpc.net/problem/16194)         | [설명](https://blog.naver.com/yepp0517) |
-
+| 9184번  | [신나는 함수 실행](https://www.acmicpc.net/problem/9184)         | [설명](https://blog.naver.com/yepp0517) |
 
 
 #### Graph

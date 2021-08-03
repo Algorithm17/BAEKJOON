@@ -6,10 +6,10 @@ using namespace std;
 
 
 int n;
-int T[16];
-int P[16];
-int dp[16];
-int ma_cnt=0;
+int T[17];
+int P[17];
+int dp[17];
+
 
 int main(){
     ios_base::sync_with_stdio(false);
@@ -22,23 +22,17 @@ int main(){
         cin >> T[i] >> P[i];
     }
 
-    for(int i=1;i<=n;i++){
-        if(i+T[i]> n) continue; // 범위를 넘어섰다면
 
-        dp[i] = P[i];
-
-        for(int j= i; j+T[j]<=n;j+=T[j]){
-            dp[i] += P[j];
-            cout << j << " " << P[j] << " "<<dp[i]<<"\n";
-
+    for(int i=n;i>0;i--){
+        if(i+T[i]-1>n){ // 범위를 벗어났을 때(상담할 수 없을 때)
+            dp[i] = dp[i+1];
         }
-
-        ma_cnt = max(ma_cnt,dp[i]);
-
+        else{  // 상담 가능할 때
+            dp[i] = max(P[i]+dp[i+T[i]],dp[i+1]);
+        }
     }
 
-
-    cout << ma_cnt << "\n";
+    cout << dp[1] <<"\n";
 
 
     return 0;

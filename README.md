@@ -30,6 +30,7 @@
 | 1325번  | [효율적인 해킹](https://www.acmicpc.net/problem/1325)         | [설명](https://blog.naver.com/yepp0517/222440658616) |
 | 1261번  | [알고스팟](https://www.acmicpc.net/problem/1261)         | [설명](https://blog.naver.com/yepp0517/222447529319) |
 | 1926번  | [그림](https://www.acmicpc.net/problem/1926)         | [설명](https://blog.naver.com/yepp0517/222450673428) |
+| 2644번  | [촌수계산](https://www.acmicpc.net/problem/2644)         | [설명](https://blog.naver.com/yepp0517/222454002840) |
 
 
 
@@ -38,4 +39,11 @@
 | -------- | ---- | -------- |
 | 15683번  | [감시](https://www.acmicpc.net/problem/15683)         | [설명](https://blog.naver.com/yepp0517/222449005927) |
 | 1969번  | [DNA](https://www.acmicpc.net/problem/1969)         | [설명](https://blog.naver.com/yepp0517/222449324241) |
+| 14501번  | [퇴사](https://www.acmicpc.net/problem/14501)         | [설명](https://blog.naver.com/yepp0517/222454498049) |
+| 2468번  | [안전 영역](https://www.acmicpc.net/problem/2468)         | [설명](https://blog.naver.com/yepp0517/222455290320) |
 
+
+**Binary Search**
+| 문제번호 | page | 답지설명 |
+| -------- | ---- | -------- |
+| 7795번  | [먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)         | [설명](https://blog.naver.com/yepp0517/222455261129) |

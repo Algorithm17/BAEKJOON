@@ -31,6 +31,7 @@
 | 1261번  | [알고스팟](https://www.acmicpc.net/problem/1261)         | [설명](https://blog.naver.com/yepp0517/222447529319) |
 | 1926번  | [그림](https://www.acmicpc.net/problem/1926)         | [설명](https://blog.naver.com/yepp0517/222450673428) |
 | 2644번  | [촌수계산](https://www.acmicpc.net/problem/2644)         | [설명](https://blog.naver.com/yepp0517/222454002840) |
+| 22352번  | [항체 인식](https://www.acmicpc.net/problem/22352)         | [설명](https://blog.naver.com/yepp0517/222456411200) |
 
 
 
@@ -47,3 +48,4 @@
 | 문제번호 | page | 답지설명 |
 | -------- | ---- | -------- |
 | 7795번  | [먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)         | [설명](https://blog.naver.com/yepp0517/222455261129) |
+| 16401번  | [과자 나눠주기](https://www.acmicpc.net/problem/16401)         | [설명](https://blog.naver.com/yepp0517/222456386774) |

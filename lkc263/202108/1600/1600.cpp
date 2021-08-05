@@ -8,7 +8,8 @@ using namespace std;
 
 
 struct StructList{
-    int x, y;
+    int x;
+    int y;
     int horse_cnt;
     int current_total_count;
 };
@@ -23,13 +24,13 @@ int adjacent_coordinate[4][2] = {{-1,0},{0,1},{1,0},{0,-1}};
 // 인접한 칸 (원숭이가 이동한 공간)
 
 int arr[201][201];
-bool visited[201][201][101];
-int total;
+bool visited[201][201][31];
+int total = -1;
 
 void bfs(){
     queue<StructList> q;
 
-    q.push({0,0,0,0});
+    q.push({1,1,0,0});
 
     while(!q.empty()){
         int x_position = q.front().x;
@@ -37,67 +38,60 @@ void bfs(){
         int current_horse_cnt = q.front().horse_cnt;
         int current_total = q.front().current_total_count;
 
+
+
         q.pop();
 
-        if(x_position == w && y_position == h){
+        if(x_position == h && y_position == w){
             total = current_total;
-            return;
+            break;
         }
-        if(visited[start_x][start_y][current_horse_cnt]) continue;
-        visited[start_x][start_y][current_horse_cnt] = true;
 
-        int number_of_repetitions = 0;
+        if(visited[x_position][y_position][current_horse_cnt]) continue;
+        visited[x_position][y_position][current_horse_cnt] = true;
 
 
-        if(k > 0){
+        if(k > current_horse_cnt){
             // 말의 움직임
             for(int i=0;i<8;i++){
-                int x_horse = start_x + horse_coordinate[i][0];
-                int y_horse = start_y + horse_coordinate[i][1];
+                int x_horse = x_position + horse_coordinate[i][0];
+                int y_horse = y_position + horse_coordinate[i][1];
 
-                if(x_horse < 0 || x_horse > w || y_horse < 0 || y_horse > h) continue;
-                else if(visited[x_horse][y_horse]) continue;
+                if(x_horse <= 0 || x_horse > h || y_horse <= 0 || y_horse > w) continue;
+                else if(visited[x_horse][y_horse][current_horse_cnt]) continue;
                 else if(arr[x_horse][y_horse]==1) continue;
 
-                number_of_repetitions++;
-
-                pq.push({-index_data-1,{x_horse,y_horse}});
-
+                q.push({x_horse,y_horse,current_horse_cnt+1,current_total+1});
             }
-            k--;
-        }
 
-        if(number_of_repetitions == 0){
-            // 원숭이 움직임
+            // 원숭이의 움직임(이미 지나간 곳을 검사할 수도 있다.)
             for(int i=0;i<4;i++){
-                int x_monkey = start_x + adjacent_coordinate[i][0];
-                int y_monkey = start_y + adjacent_coordinate[i][1];
+                int x_monkey = x_position + adjacent_coordinate[i][0];
+                int y_monkey = y_position + adjacent_coordinate[i][1];
 
-                if(x_monkey < 0 || x_monkey > w || y_monkey < 0 || y_monkey > h) continue;
-                else if(visited[x_monkey][y_monkey]) continue;
+                if(x_monkey <= 0 || x_monkey > h || y_monkey <= 0 || y_monkey > w) continue;
+                else if(visited[x_monkey][y_monkey][current_horse_cnt]) continue;
                 else if(arr[x_monkey][y_monkey]==1) continue;
 
-                number_of_repetitions++;
-
-                pq.push({-index_data-1,{x_monkey,y_monkey}});
+                q.push({x_monkey,y_monkey,current_horse_cnt,current_total+1});
             }
+        }else{
+            // 원숭이 움직임, 인접한 칸 이동 (말이 k번 움직였을 때)
+            for(int i=0;i<4;i++){
+                int x_monkey = x_position + adjacent_coordinate[i][0];
+                int y_monkey = y_position + adjacent_coordinate[i][1];
 
+                if(x_monkey <= 0 || x_monkey > h || y_monkey <= 0 || y_monkey > w) continue;
+                else if(visited[x_monkey][y_monkey][current_horse_cnt]) continue;
+                else if(arr[x_monkey][y_monkey]==1) continue;
+
+
+                q.push({x_monkey,y_monkey,current_horse_cnt,current_total+1});
+            }
         }
-
-
-        if(number_of_repetitions==0){
-            total_count = -1;
-            return;
-        }
-
-        number_of_repetitions = 0;
-
-        bfs_count++;
 
 
     }
-
-
 
 }
 
@@ -110,14 +104,15 @@ int main(){
 
     cin >> w >> h;
 
-    for(int i=1;i<=w;i++){
-        for(int j=1;j<=h;j++){
+    for(int i=1;i<=h;i++){
+        for(int j=1;j<=w;j++){
             cin >> arr[i][j];
         }
     }
 
     bfs();
 
-    cout << total_count << "\n";
+    cout << total << "\n";
     return 0;
 }
+

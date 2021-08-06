@@ -32,8 +32,8 @@
 | 1926번  | [그림](https://www.acmicpc.net/problem/1926)         | [설명](https://blog.naver.com/yepp0517/222450673428) |
 | 2644번  | [촌수계산](https://www.acmicpc.net/problem/2644)         | [설명](https://blog.naver.com/yepp0517/222454002840) |
 | 22352번  | [항체 인식](https://www.acmicpc.net/problem/22352)         | [설명](https://blog.naver.com/yepp0517/222456411200) |
-
-
+| 1600번  | [말이 되고픈 원숭이](https://www.acmicpc.net/problem/1600)         | [설명](https://blog.naver.com/yepp0517/222457700573) |
+| 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
 
 **Brute Force**
 | 문제번호 | page | 답지설명 |
@@ -42,6 +42,8 @@
 | 1969번  | [DNA](https://www.acmicpc.net/problem/1969)         | [설명](https://blog.naver.com/yepp0517/222449324241) |
 | 14501번  | [퇴사](https://www.acmicpc.net/problem/14501)         | [설명](https://blog.naver.com/yepp0517/222454498049) |
 | 2468번  | [안전 영역](https://www.acmicpc.net/problem/2468)         | [설명](https://blog.naver.com/yepp0517/222455290320) |
+| 10971번  | [외판원 순회 2](https://www.acmicpc.net/problem/10971)         | [설명](https://blog.naver.com/yepp0517/222458991261) |
+
 
 
 **Binary Search**
@@ -49,3 +51,4 @@
 | -------- | ---- | -------- |
 | 7795번  | [먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)         | [설명](https://blog.naver.com/yepp0517/222455261129) |
 | 16401번  | [과자 나눠주기](https://www.acmicpc.net/problem/16401)         | [설명](https://blog.naver.com/yepp0517/222456386774) |
+| 2143번  | [두 배열의 합](https://www.acmicpc.net/problem/2143)         | [설명](https://blog.naver.com/yepp0517/222458172087) |

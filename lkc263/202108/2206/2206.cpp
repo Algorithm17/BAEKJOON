@@ -11,7 +11,7 @@ struct PointData{
     int x;
     int y;
     int cnt;
-    int wall;  // º®
+    int wall;  //
 };
 
 int n,m;
@@ -32,14 +32,14 @@ void bfs(){
         int y_data = q.front().y;
         int cnt = q.front().cnt;
         int wall = q.front().wall;
-        cout << x_data << " " << y_data << "\n";
+
         q.pop();
 
         if(x_data == n && y_data == m){
             total = cnt;
             return;
         }
-
+//        cout << x_data << " " << y_data << " "<< cnt << " " << wall <<"\n";
         if(visited[x_data][y_data][wall]) continue;
         visited[x_data][y_data][wall] = true;
 
@@ -51,14 +51,23 @@ void bfs(){
 
 
             if(arr[x_udlr][y_udlr]){
+
                 if(wall==1) continue;
+                if(visited[x_udlr][y_udlr][wall+1]) continue;
                 else{
-                    wall = 1;
+//                    cout << "ÀÎµ¦½º : " << i << " " <<arr[x_udlr][y_udlr] << " ";
+//                    cout << "push : " << x_udlr << " " << y_udlr << " "<<cnt+1 << " " << wall+1 <<"\n";
+                    q.push({x_udlr,y_udlr,cnt+1,wall+1});
+
                 }
+            }else{
+                if(visited[x_udlr][y_udlr][wall]) continue;
+//                cout << "ÀÎµ¦½º : " << i << " " <<arr[x_udlr][y_udlr] << " ";
+//                cout << "push : " << x_udlr << " " << y_udlr << " "<<cnt+1 << " " << wall <<"\n";
+                q.push({x_udlr,y_udlr,cnt+1,wall});
             }
 
-            if(visited[x_udlr][y_udlr][wall]) continue;
-            q.push({x_udlr,y_udlr,cnt+1,wall});
+
         }
 
     }

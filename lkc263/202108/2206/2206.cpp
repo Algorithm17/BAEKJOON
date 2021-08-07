@@ -39,7 +39,7 @@ void bfs(){
             total = cnt;
             return;
         }
-//        cout << x_data << " " << y_data << " "<< cnt << " " << wall <<"\n";
+
         if(visited[x_data][y_data][wall]) continue;
         visited[x_data][y_data][wall] = true;
 
@@ -52,19 +52,15 @@ void bfs(){
 
             if(arr[x_udlr][y_udlr]){
 
-                if(wall==1) continue;
-                if(visited[x_udlr][y_udlr][wall+1]) continue;
+                if(wall==1) continue;  // 이전에, 이동할 수 없는 벽 1을 부순 적이 있을 때 (이전에, 1인 지점을 부순 적이 있을 때) continue
+                if(visited[x_udlr][y_udlr][wall+1]) continue; // 그 좌표를 이미 방문한 적이 있을 때 continue
                 else{
-//                    cout << "�ε��� : " << i << " " <<arr[x_udlr][y_udlr] << " ";
-//                    cout << "push : " << x_udlr << " " << y_udlr << " "<<cnt+1 << " " << wall+1 <<"\n";
-                    q.push({x_udlr,y_udlr,cnt+1,wall+1});
+                    q.push({x_udlr,y_udlr,cnt+1,wall+1});      // 이외라면, queue에 삽입한다.
 
                 }
             }else{
-                if(visited[x_udlr][y_udlr][wall]) continue;
-//                cout << "�ε��� : " << i << " " <<arr[x_udlr][y_udlr] << " ";
-//                cout << "push : " << x_udlr << " " << y_udlr << " "<<cnt+1 << " " << wall <<"\n";
-                q.push({x_udlr,y_udlr,cnt+1,wall});
+                if(visited[x_udlr][y_udlr][wall]) continue;   // 좌표를 이미 방문한 적이 있을 때 continue
+                q.push({x_udlr,y_udlr,cnt+1,wall});            // 아니라면, queue에 삽입한다.
             }
 
 

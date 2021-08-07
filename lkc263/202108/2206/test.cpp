@@ -1,94 +1,106 @@
 #include<iostream>
 #include<cstdio>
-#include<queue>
 #include<cstring>
 #include<algorithm>
+#include<queue>
 
 using namespace std;
 
-int n, m;
 
-int arr[1001][1001];
-
-bool visit[1001][1001][5]; //distroy에 대한 (y,x) 의 방문 여부
-
-int answer = -1;
-
-int xpos[4] = { -1, 0, 1, 0 };
-int ypos[4] = { 0, 1, 0, -1 };
-
-struct Point {
-	int x; //x좌표
-	int y; //y좌표
-	int distance; //최소이동거리
-	int distroy; //파괴한 벽의 수
+struct PointData{
+    int x;
+    int y;
+    int cnt;
+    int wall;  //
 };
 
-void bfs(int x, int y) {
-	queue<Point> q;
+int n,m;
+int arr[1001][1001];
+bool visited[1001][1001][5];
+int total = -1;
+char data[1001];
 
-	q.push({ x, y, 1, 0 });
+int x_coordinate[4] = {-1,0,1,0};
+int y_coordinate[4] = {0,1,0,-1};
 
-	while (!q.empty()) {
-		int startx = q.front().x;
-		int starty = q.front().y;
-		int dis = q.front().distance;
-		int dist = q.front().distroy;
+void bfs(){
+    queue<PointData> q;
+    q.push({1,1,1,0});
 
-		q.pop();
+    while(!q.empty()){
+        int x_data = q.front().x;
+        int y_data = q.front().y;
+        int cnt = q.front().cnt;
+        int wall = q.front().wall;
 
-		if (starty == n && startx == m) { //(n,m)의 좌표에 도착했을 때
-			answer = dis; //answer변수 업데이트
-			break;
-		}
+        q.pop();
 
-		if (visit[starty][startx][dist]) continue; //dist(파괴한 벽의 수)에 대한 (y,x)의 좌표가 방문한 좌표일 때 continue
+        if(x_data == n && y_data == m){
+            total = cnt;
+            return;
+        }
 
-		visit[starty][startx][dist] = true; //방문하지 않은 좌표일 땐 방문했다고 표시
+        cout << x_data << " " << y_data << " "<< cnt << " " << wall <<"\n";
+        if(visited[x_data][y_data][wall]) continue;
+        visited[x_data][y_data][wall] = true;
 
-		for (int i = 0; i <= 3; i++) {
-			int nextx = startx + xpos[i];
-			int nexty = starty + ypos[i];
+        for(int i=0;i<4;i++){
+            int x_udlr = x_data + x_coordinate[i];
+            int y_udlr = y_data + y_coordinate[i];
 
-			if (nextx <= 0 || nextx > m || nexty <= 0 || nexty > n) continue; //next좌표가 범위를 벗어난 좌표일 때
+            if(x_udlr <=0 || x_udlr > n || y_udlr <=0 || y_udlr > m) continue;
 
-			if (arr[nexty][nextx] == 1) { //next 좌표에 벽이 존재할 때
-				if (dist == 1) continue; //이미 벽을 파괴한 적이 있을 때
 
-				if (visit[nexty][nextx][dist + 1]) continue; //그 좌표가 방문한 좌표일 때
+            if(arr[x_udlr][y_udlr]){
+                if(wall==1) continue;
+                if(visited[x_udlr][y_udlr][wall+1]) continue;
+                else{
+                    cout << "인덱스 : " << i <<" wall = 1 대입" <<" ";
+                    wall = 1;
+                    // 이렇게 줄시 for반복문 돌 때 wall에는 1로 저장이 된다. (0<= i <= 3)
+                    // 그러므로 wall에는 1로 저장보다는 push 할 때 wall + 1로 해주어야 한다.
+                    // 이전 queue에 저장되어 있는 값으로 적용시켜야 한다.
 
-				q.push({ nextx, nexty, dis + 1, dist + 1 }); //다음 좌표를 벽을 파괴했다고 표시한 후 큐에 삽입
-			}
 
-			else {
-				if (visit[nexty][nextx][dist]) continue; //그 좌표가 방문한 좌표일 때
 
-				q.push({ nextx, nexty, dis + 1, dist }); //다음 좌표를 큐에 삽입
-			}
-		}
-	}
+                }
+            }
+
+            if(visited[x_udlr][y_udlr][wall]) continue;
+            cout << "인덱스 : " << i << " " <<arr[x_udlr][y_udlr] << " ";
+            cout << "push : " << x_udlr << " " << y_udlr << " "<<cnt+1 << " " << wall <<"\n";
+            q.push({x_udlr,y_udlr,cnt+1,wall});
+
+            wall = 0;
+            // for문을 0 ~ 4번까지 한번씩 돌려보자
+            // 4번 돌리기전 wall에는 1의 값으로 저장되어 있었다고 생각해보자.
+            // wall에 저장되어 있는 값이 1이였다면 0으로 초기화 된다.
+
+        }
+
+    }
 }
 
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);
 
-	cin >> n >> m;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-	for (int i = 1; i <= n; i++) {
-		char str[1001];
 
-		cin >> str;
+    cin >> n >> m;
 
-		for (int j = 0; j < strlen(str); j++) {
-			arr[i][j + 1] = str[j] - '0';
-		}
-	}
+    for(int i=1;i<=n;i++){
+        cin >> data;
+        for(int j=1;j<=strlen(data);j++){
+            arr[i][j] = data[j-1] - '0';
+        }
+    }
 
-	bfs(1, 1); //bfs 수행
+    bfs();
 
-	cout << answer; //answer값 출력
+    cout << total << "\n";
 
-	return 0;
+
+    return 0;
 }

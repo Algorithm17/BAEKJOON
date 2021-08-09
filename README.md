@@ -34,6 +34,7 @@
 | 22352번  | [항체 인식](https://www.acmicpc.net/problem/22352)         | [설명](https://blog.naver.com/yepp0517/222456411200) |
 | 1600번  | [말이 되고픈 원숭이](https://www.acmicpc.net/problem/1600)         | [설명](https://blog.naver.com/yepp0517/222457700573) |
 | 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
+| 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
 
 **Brute Force**
 | 문제번호 | page | 답지설명 |

@@ -45,7 +45,21 @@ int main(){
         arr[data] = true;
     }
 
-    // 브루트포스 알고리즘
+    int result = abs(n-100);
+
+    for(int i=0;i<=1000000;i++){
+        int len = decimal_confirmation(i);
+        if(len > 0){
+            int i_n_beside = abs(i-n);   // i번에서 n번째까지 개수
+            if(result > len + i_n_beside){
+                result = len + i_n_beside;
+            }
+        }
+    }
+
+
+
+        // 브루트포스 알고리즘
     // 최소 크기에서 최대 크기까지 검사를 한다.
     // 0 <= N <= 500,000인데
     // 1000,000까지 검사하는 이유는 어떻게 될까?
@@ -56,18 +70,8 @@ int main(){
     // => 1000,000 - 500,000 = 500,000이다.
     // 문제에서는 채널이 무한대만큼 있다고 하였고 버튼을 최소 몇 번 눌러야 채널 N으로 이동하는지 질문하였다.
     // 그러므로 위 예시를 보면, N이 500,000일 때를 기준으로 +-를 이용한 최소값은 499,900이다.
-    // N은 이를 기준으로 1000,000 이하로 범위를 주면 된다.
+    // N을 기준으로 1000,000 이하로 범위를 주면 된다.
 
-    int result = abs(n-100);
-    for(int i=0;i<=1000000;i++){
-        int len = decimal_confirmation(i);
-        if(len > 0){
-            int i_n_beside = abs(i-n);   // i번에서 n번째까지 개수
-            if(result > len + i_n_beside){
-                result = len + i_n_beside;
-            }
-        }
-    }
 
     cout << result << "\n";
 

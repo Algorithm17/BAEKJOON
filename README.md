@@ -34,8 +34,6 @@
 | 22352번  | [항체 인식](https://www.acmicpc.net/problem/22352)         | [설명](https://blog.naver.com/yepp0517/222456411200) |
 | 1600번  | [말이 되고픈 원숭이](https://www.acmicpc.net/problem/1600)         | [설명](https://blog.naver.com/yepp0517/222457700573) |
 | 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
-| 12851번  | [숨바꼭질2](https://www.acmicpc.net/problem/12851)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
-
 
 **Brute Force**
 | 문제번호 | page | 답지설명 |
@@ -54,3 +52,4 @@
 | 7795번  | [먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)         | [설명](https://blog.naver.com/yepp0517/222455261129) |
 | 16401번  | [과자 나눠주기](https://www.acmicpc.net/problem/16401)         | [설명](https://blog.naver.com/yepp0517/222456386774) |
 | 2143번  | [두 배열의 합](https://www.acmicpc.net/problem/2143)         | [설명](https://blog.naver.com/yepp0517/222458172087) |
+

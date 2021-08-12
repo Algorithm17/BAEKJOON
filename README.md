@@ -16,7 +16,7 @@
 | 10844번  | [쉬운 계단 수](https://www.acmicpc.net/problem/10844)         | [설명](https://blog.naver.com/yepp0517/222447506802) |
 | 16194번  | [카드 구매하기 2](https://www.acmicpc.net/problem/16194)         | [설명](https://blog.naver.com/yepp0517/222448896087) |
 | 9184번  | [신나는 함수 실행](https://www.acmicpc.net/problem/9184)         | [설명](https://blog.naver.com/yepp0517/222450881600) |
-
+| 1937번  | [욕심쟁이 판다](https://www.acmicpc.net/problem/1937)         | [설명](https://blog.naver.com/yepp0517/222465359000) |
 
 **Graph**
 | 문제번호 | page                                                      | 답지설명                                             |
@@ -34,7 +34,11 @@
 | 22352번  | [항체 인식](https://www.acmicpc.net/problem/22352)         | [설명](https://blog.naver.com/yepp0517/222456411200) |
 | 1600번  | [말이 되고픈 원숭이](https://www.acmicpc.net/problem/1600)         | [설명](https://blog.naver.com/yepp0517/222457700573) |
 | 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
-| 2206번  | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206)         | [설명](https://blog.naver.com/yepp0517/222459021511) |
+| 12851번  | [숨바꼭질2](https://www.acmicpc.net/problem/12851)         | [설명](https://blog.naver.com/yepp0517/222462682511) |
+| 1963번  | [소수 경로](https://www.acmicpc.net/problem/1963)         | [설명](https://blog.naver.com/yepp0517/222463956860) |
+| 11404번  | [플로이드](https://www.acmicpc.net/problem/11404)         | [설명](https://blog.naver.com/yepp0517/222463987987) |
+| 13023번  | [ABCDE](https://www.acmicpc.net/problem/13023)         | [설명](https://blog.naver.com/yepp0517/222465394111) |
+| 1389번  | [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389)         | [설명](https://blog.naver.com/yepp0517/222466788130) |
 
 **Brute Force**
 | 문제번호 | page | 답지설명 |
@@ -44,7 +48,8 @@
 | 14501번  | [퇴사](https://www.acmicpc.net/problem/14501)         | [설명](https://blog.naver.com/yepp0517/222454498049) |
 | 2468번  | [안전 영역](https://www.acmicpc.net/problem/2468)         | [설명](https://blog.naver.com/yepp0517/222455290320) |
 | 10971번  | [외판원 순회 2](https://www.acmicpc.net/problem/10971)         | [설명](https://blog.naver.com/yepp0517/222458991261) |
-
+| 1107번  | [리모컨](https://www.acmicpc.net/problem/1107)         | [설명](https://blog.naver.com/yepp0517/222462560647) |
+| 2589번  | [보물섬](https://www.acmicpc.net/problem/2589)         | [설명](https://blog.naver.com/yepp0517/222466768165) |
 
 
 **Binary Search**

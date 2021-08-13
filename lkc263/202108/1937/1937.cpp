@@ -1,14 +1,3 @@
-// 이 문제는 dfs로 풀어야 한다.
-// 이유는
-// 1 4
-// 2 3
-// 인 경우, bfs로 풀어버리면
-// 1을 기준으로 이동할 때
-// 1 -> 4 (4 true가 되버리고)
-// 1 -> 2 -> 3 -> 4(true가 된 4를 할 수가 없다.)
-// 그러므로 dfs를 이용한다.
-
-
 #include<iostream>
 #include<cstdio>
 #include<algorithm>
